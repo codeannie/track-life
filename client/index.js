@@ -36,8 +36,6 @@ function setIndexHandlers() {
     const userName = demoUser.userName;
     const password = demoUser.password;
 
-    console.log(demoUser);
-
     $.post('/api/auth/login', {userName, password}).then((user) => {
       Cookies.set('jwt', user.authToken);
       Cookies.set('loggedInUserId', user.userId);
