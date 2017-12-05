@@ -16,7 +16,7 @@ import {
 
 import { setSignUpHandlers } from "./signup";
 import { setLoginHandlers } from "./login";
-import { demoUser } from "../client/demo";
+import { demoUser } from "./demo";
 
 export const STATE = {
   trackers: [],
@@ -35,6 +35,8 @@ function setIndexHandlers() {
   $(".demo-btn").click(function() {
     const userName = demoUser.userName;
     const password = demoUser.password;
+
+    console.log(demoUser);
 
     $.post('/api/auth/login', {userName, password}).then((user) => {
       Cookies.set('jwt', user.authToken);
