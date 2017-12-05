@@ -20613,10 +20613,8 @@ function setIndexHandlers() {
 }
   // Demo button
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".demo-btn").click(function() {
-    const userName = __WEBPACK_IMPORTED_MODULE_6__config__["demoUser"].userName;
-    const password = __WEBPACK_IMPORTED_MODULE_6__config__["demoUser"].password;
-    
-    console.log(__WEBPACK_IMPORTED_MODULE_6__config__["demoUser"]);
+    const userName = __WEBPACK_IMPORTED_MODULE_6__config__["demoName"];
+    const password = __WEBPACK_IMPORTED_MODULE_6__config__["demoPassword"];
 
     __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.post('/api/auth/login', {userName, password}).then((user) => {
       __WEBPACK_IMPORTED_MODULE_1_js_cookie___default.a.set('jwt', user.authToken);
@@ -59758,12 +59756,11 @@ const PORT = process.env.PORT || 8080;
 const JWT_SECRET = 'trackyolife';
 const JWT_EXPIRY = process.env.JWT_EXPIRY || '3d';
 
-const demoUser = {
-  userName: process.env.userName,
-  password: process.env.password
-}
+const demoName =  process.env.userName;
+const demoPassword = process.env.password;
 
-module.exports = {DATABASE_URL, JWT_EXPIRY, JWT_SECRET, PORT, TEST_DATABASE_URL, demoUser};
+
+module.exports = {DATABASE_URL, JWT_EXPIRY, JWT_SECRET, PORT, TEST_DATABASE_URL, demoName, demoPassword};
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(312), __webpack_require__(316)))
 
 /***/ })
