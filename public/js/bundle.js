@@ -20615,8 +20615,6 @@ function setIndexHandlers() {
     const userName = __WEBPACK_IMPORTED_MODULE_6__demo__["a" /* demoUser */].userName;
     const password = __WEBPACK_IMPORTED_MODULE_6__demo__["a" /* demoUser */].password;
 
-    console.log(__WEBPACK_IMPORTED_MODULE_6__demo__["a" /* demoUser */]);
-
     __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.post('/api/auth/login', {userName, password}).then((user) => {
       __WEBPACK_IMPORTED_MODULE_1_js_cookie___default.a.set('jwt', user.authToken);
       __WEBPACK_IMPORTED_MODULE_1_js_cookie___default.a.set('loggedInUserId', user.userId);
