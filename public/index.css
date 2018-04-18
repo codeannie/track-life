@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -52,13 +56,14 @@ button {
   padding: 1em;
 }
 
+
 .login {
   display: none;
 }
 
 .intro-container {
   margin: 0 auto;
-  width: 70%;
+  width: 85%;
 }
 
 .intro-blurb {
@@ -152,6 +157,7 @@ button {
 }
 
 .footer {
+  margin: 0;
   padding: 0.25em;
   text-align: center;
   background-color: #00bcd4;
