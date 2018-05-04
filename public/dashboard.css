@@ -29,6 +29,7 @@ button {
 .dashboard,
 .tracker-summary,
 .tracker-archive,
+.create-tracker,
 .profile {
   padding: 1em;
 }
@@ -246,6 +247,18 @@ button {
   border-radius: 3px;
   cursor: pointer;
   padding: 5px;
+}
+
+.nav-btn:hover {
+  background-color: #ffd54f;
+}
+
+.new-trkr-btn:hover {
+  background-color: #00bcd4;
+}
+
+.trkr-btn:hover {
+  background-color: #ffd54f;
 }
 
 .footer {
